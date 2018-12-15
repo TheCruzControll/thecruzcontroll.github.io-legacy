@@ -1,0 +1,117 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    background-color: #bbdefb;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 0.4fr 1.2fr 0.4fr;
+    grid-template-rows: 0.4fr 2.2fr 0.4fr;
+    grid-template-areas: "picture info info info" "picture info info info" "picture info info info";
+    height: 100%;
+}
+
+.picture {
+    grid-area: picture;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr 1.2fr 0.8fr;
+    grid-template-rows: 0.4fr 2.2fr 0.4fr;
+    grid-template-areas: ". . . ." ". content content ." ". . . .";
+    grid-area: info;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.8fr 0.8fr 1.6fr 0.8fr;
+    grid-template-areas: "name name name" ". description description" ". . ." "links links links";
+    grid-area: content;
+}
+
+.name {
+    grid-area: name;
+}
+
+.description { grid-area: description; }
+
+.links {
+    grid-area: links;
+}
+
+img {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    
+    max-width: 70%;
+    max-height: 70%;
+} 
+
+
+.info {
+    background-color: white;
+    height: 100%;
+    background-size: cover;
+}
+
+.underline{
+    position: relative;
+}
+
+.underline::after{
+    box-shadow: inset 0 -22px 0 0 #bbdefb;
+    content: " ";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 100%;
+    z-index: -1;
+}
+
+.picture{
+    background: rgb(187,222,251);
+    background: linear-gradient(275deg, rgba(187,222,251,1) 22%, rgba(138,172,200,1) 100%);
+}
+
+.name h1 {
+    text-align: right;
+    font-family: "Karla", sans-serif;
+    font-size: 4.5rem;
+    margin: 0;
+    color: #26272B;
+} 
+
+#attributes{
+    font-family: 'Lora', sans-serif;
+    font-size: 2rem;
+    float: right;
+    animation-delay: 2s;
+}
+
+svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vw;
+    /* set height to pixels if you want angle to change with screen width */
+  }
+
+  a:hover{
+      color: #bbdefb;
+  }
+  a{
+      color: black;
+      font-size: 4rem;
+      letter-spacing: 1.5rem;
+  }
+
+  .links{
+      animation-delay: 1.1s;
+  }

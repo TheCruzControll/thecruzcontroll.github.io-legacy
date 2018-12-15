@@ -1,1 +1,63 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+            integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat|Lora"
+            rel="stylesheet"
+        />
+        <script src="typeit.min.js"></script>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="picture">
+                <img class="animate zoomin" src="headshot.png" alt="" />
+            </div>
+            <div class="info animated fadeInDownBig">
+                <div class="content">
+                    <div class="name animated bounceInRight delay-1s">
+                        <h1>
+                            <span class="underline-container">
+                                <div class="underline">Francis Cruz</div>
+                            </span>
+                        </h1>
+                    </div>
+                    <div class="description ">
+                        <div id="attributes" class="animated zoomIn"></div>
+                    </div>
+                    <div class="links animated bounceInRight">
+                        <a href="https://github.com/thecruzcontroll"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/francis-cruz/"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:fcruz2@mail.sfsu.edu"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/typeit@VERSION_NUMBER/dist/typeit.min.js"></script>
+        <script>
+            new TypeIt("#attributes", {
+                strings: ["Developer","Student","Designer"],
+                speed: 80,
+                breakLines:false,
+                loop:true,
+                startDelay:2500,
+                nextStringDelay:3000,
+                deleteSpeed:50,
+            });
+        </script>
+    </body>
+</html>
